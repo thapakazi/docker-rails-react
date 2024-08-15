@@ -1,5 +1,7 @@
 class PingController < ApplicationController
   def index
-    render status: :ok, html: "OK"
+    response = 'ok'
+    binding.pry
+    render status: :ok, html: response
   end
 end

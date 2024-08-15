@@ -42,6 +42,8 @@ services:
       - "3001:3000"
     volumes:
       - ./api:/app
+    stdin_open: true
+    tty: true
   postgres:
     image: postgres:12.11-alpine
     env_file:
