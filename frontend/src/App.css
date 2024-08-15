@@ -5,12 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin-bottom: 20px; /* Add some space below the logo */
 }
 
 .App-header {
@@ -24,15 +19,47 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Ping-response {
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+  color: #61dafb; /* Use a color that matches the LazyDocker theme */
+  margin: 20px 0; /* Add some margin above and below the PING response */
+  background-color: rgba(0, 0, 0, 0.7); /* Add a subtle background color */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+  animation: zoomInOut 3s infinite; /* Apply zoom-in and zoom-out animation */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Ping-response:hover {
+  transform: scale(1.5); /* Increase the scale on hover */
+  background-color: green; /* Change the background color to red on hover */
+  color: white; /* Change text color to white for better contrast */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.App-link:hover {
+  text-decoration: underline;
 }
