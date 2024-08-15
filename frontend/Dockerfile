@@ -10,5 +10,5 @@ USER "${UID}:${GID}"
 
 WORKDIR /app
 
-ENTRYPOINT ["/app/bin/docker-entrypoint.sh"]
+#ENTRYPOINT ["/app/bin/docker-entrypoint.sh"]
 CMD ["yarn", "start"]
