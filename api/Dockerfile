@@ -11,6 +11,9 @@ RUN gem install bundler rails rake
 ENV RAILS_ROOT /app
 WORKDIR /app
 
+RUN groupadd -g ${GID} ruby && \
+    useradd -m -u ${UID} -g ruby ruby -s /bin/bash
+
 EXPOSE 3000
 
 USER "${UID}:${GID}"
